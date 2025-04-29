@@ -711,6 +711,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'pyright',
+        'bashls',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -877,11 +879,11 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'folke/tokyonight.nvim',
-    'Mofiqul/dracula.nvim',
+    'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require('dracula').setup {
+      require('tokyonight').setup {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
@@ -890,7 +892,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'dracula'
+      vim.cmd.colorscheme 'tokyonight-moon'
     end,
   },
 
