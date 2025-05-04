@@ -665,7 +665,13 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
+        pyright = {
+          settings = {
+            python = {
+              pythonPath = './venv/bin/python',
+            },
+          },
+        },
         bashls = {
           filetypes = { 'bash', 'sh' },
         },
