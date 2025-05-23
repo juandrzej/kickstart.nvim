@@ -676,7 +676,7 @@ require('lazy').setup({
         pyright = {
           settings = {
             python = {
-              pythonPath = './venv/bin/python',
+              -- pythonPath = './venv/bin/python',
             },
           },
         },
@@ -726,12 +726,10 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'lua_ls',
-        'pyright',
         'bashls',
-        'black',
-        'isort',
-        'mypy',
+        'pyright',
         'ruff',
+        'mypy',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
