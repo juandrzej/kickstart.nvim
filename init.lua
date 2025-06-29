@@ -413,6 +413,22 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          file_ignore_patterns = {
+            '%.git/',
+            'node_modules/',
+          },
+          hidden = true, -- This shows hidden files
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+            -- Also search in .gitignore files
+            no_ignore = false,
+            -- Show .git directory contents
+            follow = true,
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
