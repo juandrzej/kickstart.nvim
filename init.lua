@@ -190,7 +190,9 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+-- Actually mine mine :D
 vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>z', ':ZenMode<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
